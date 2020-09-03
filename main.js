@@ -43,18 +43,18 @@ $(document).ready(function(){
       prevImg.addClass("active")
     }
 
-    $(document).keypress(
-      function(){
-        switch(event.which){
-          case 115:
-                prev();
-                break;
-          case 100:
-                next();
-                break;
-          default:
-                alert("Pulasante non codificato");
-                break;
-        };
-      });
+      $(document).keydown(
+        function(event){
+          switch(event.which){
+            case 37:
+                  prev();
+                  break;
+            case 39:
+                  next();
+                  break;
+            default:
+                  alert("Pulasante non codificato");
+                  break;
+          };
+        });
 });
